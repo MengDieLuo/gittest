@@ -1,0 +1,17 @@
+#!/bin/bash
+trapper ()
+{
+echo "In trapper"
+trap 'echo "Caught in a trap!"' INT
+
+}
+while :
+do
+	echo "In the main script"
+	trapper
+	echo "still in main"
+	echo "The pid is $$"
+	sleep 5
+done
+
+

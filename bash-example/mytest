@@ -1,0 +1,2 @@
+#!/bin/bash
+echo "Users may wish to include the . directory in their PATH"

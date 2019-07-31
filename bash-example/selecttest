@@ -1,0 +1,23 @@
+#!/bin/bash
+cat <<EOF
+	1) steak and potatoes
+	2) fish and chips
+	3) soup and salad
+EOF
+echo Please make a selection.
+read choice
+case $choice in
+	1)
+	echo Stick to your ribs.
+	echo Watch your cholesterol.	
+	;;
+	2)
+	printf "British are coming!\n"
+	;;
+	3)
+	printf "Health foods...\nDieting is so boring."
+	;;
+esac
+echo Enjoy your meal
+
+

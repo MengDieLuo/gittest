@@ -1,0 +1,4 @@
+#My lab3
+/Savage/{print $1,$2,$4 "\n"}
+/Chet/{printf "%d\n",$5+$6+$7}
+$5 ~ /250/{print $0 "\n"}

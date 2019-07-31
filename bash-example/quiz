@@ -1,0 +1,11 @@
+#!/bin/bash
+#scriptname: quiz
+echo "Who was the 2nd U.S. president to be impeached"
+read asw
+while [[ "$asw" != "Bill Clinton" ]]
+do
+	echo "Wrong try again"
+	read asw
+done
+echo You got it
+

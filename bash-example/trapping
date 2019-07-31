@@ -1,0 +1,19 @@
+#!/bin/bash
+trap 'echo "Ctrl–C will not terminate $0."' INT
+trap 'echo "Ctrl–\\ will not terminate $0."' QUIT
+trap 'echo "Ctrl-Z will not terminate $0."' TSTP
+echo "Enter any string after the prompt."
+echo "When you are ready to exit,type \"stop\""
+while true
+do
+	echo -n "Go ahead...> "
+	read 
+	if [[ "$REPLY" == stop ]]
+        then
+		break
+	fi
+done
+
+
+
+

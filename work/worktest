@@ -1,0 +1,26 @@
+#!/bin/bash
+#scriptname:worktest
+echo The number of CPU:`cat /proc/cpuinfo | grep 'model name' | cut -d ':' -f 2`
+echo The cores of CPU:`cat /proc/cpuinfo | grep 'cpu cores'| cut -d ':' -f 2`
+echo The Memtotal of CPU:`cat /proc/meminfo | grep 'MemTotal' |cut -d ':' -f 2`
+echo The system disk capacity:`free | awk -F" " '/Mem/{print $2}'`
+echo The free pace :`free | awk -F" " '/Mem/{print $3}'`
+echo The Linux kernel version:`uname -r`
+echo The Linux distribution version:`lsb_release -a | grep 'Description' | cut -d ':' -f 2`
+echo The hostname is:`hostname`
+echo The IP have:
+ifconfig | grep 'netmask' | awk -F" " '{print $2}'
+echo The DNS imformation:
+cat /etc/resolv.conf
+echo The username is:`id | awk -F"[()]" '{print $2}'` 
+echo The usergroup is:`id | awk -F"[()]" '{print $4}'` 
+echo The where is home dircetory:`echo $HOME`
+echo The size of home:`du -s $HOME | awk -F" " '{print $1}'`K
+echo The current CPU usage:
+top -n1 | grep 'Cpu'
+echo The current memory usage:
+top -n1 | grep 'KiB Mem'
+echo The disk io statistics:
+iostat
+
+

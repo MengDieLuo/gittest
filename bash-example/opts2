@@ -1,0 +1,17 @@
+#!/bin/bash
+while getopts xy options 2> /dev/null
+do
+	case $options in
+	x) 
+		echo "YOu entered -x as an option"
+		;;
+	y)
+		echo "You entered -y as an option"
+		;;
+	\?)
+		echo "Only -x and -y are valid options" 1>&2
+		;;
+	esac
+done
+
+

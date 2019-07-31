@@ -1,0 +1,21 @@
+#!/bin/bash
+#scriptname
+#script to test command_line arguement
+echo The name of the script is $0
+echo The arguement are $*
+echo The first arguement is $1
+echo The secend arguement is $2
+echo The number of arguement is $#
+oldarge=$*
+set Jake Nicky Scot
+echo All the positional are $*
+echo The number of positional is $#
+echo "Goodbye for now ,$1"
+set $(date)
+echo The date is $1 $2 $3
+echo "The value of \$oldargs id $oldargs"
+set $oldargs
+echo $1 $2 $3
+
+
+

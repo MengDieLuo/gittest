@@ -1,0 +1,8 @@
+#!/bin/bash
+#scriptname : greeting2
+echo "This script is called $0"
+echo  "$0 $1 and $2"
+echo "the number of positinal parameter is $#"
+
+
+

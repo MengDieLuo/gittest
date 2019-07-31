@@ -1,0 +1,16 @@
+#!/bin/bash
+name="Joe Blow"
+if [[ "$name" == "Joe Blow" ]]
+then
+	printf "Hi $name\n"
+fi
+declare -i num=1
+while (( num < 5 ))
+do
+	let num+=1
+done
+printf "The total is %d \n" $num
+
+
+
+

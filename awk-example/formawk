@@ -1,0 +1,16 @@
+BEGIN{ FS=":"; n=1
+while(getline < "form.letter" >  0)
+	form[n++] = $0  
+	"date" | getline d;split(d, today, " ")
+	thisday=today[2]"."today[3]", "today[6]
+}
+{ for( i = 1; i < n; i++ ){
+     temp=form[i]
+     for ( j = 1; j <=NF; j++ ){
+           gsub("@date", thisday, temp)
+           gsub("#" j, $j , temp )
+        }
+	  print temp
+    }
+}
+

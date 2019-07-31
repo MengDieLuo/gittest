@@ -1,0 +1,21 @@
+#!/bin/bash
+#scriptname: greetme
+#purpose :shell
+echo Hello,$LOGNAME
+echo now,the date is 
+date
+echo the calendar is 
+cal
+pwd | ls
+ps -u root
+echo -e The \$TERM is $TERM
+echo -e The \$PATH is $PATH
+echo -e The \$HOME is $HOME
+du 
+id -g
+printf "Please,could you loan me $%.2f?\n" 50
+echo  "Bye for now $LOGNAME. The time is `date +%T`!"
+
+
+
+

@@ -1,0 +1,20 @@
+#!/bin/bash
+# Scriptname
+echo -e "Are you Happy?"
+read asw
+echo "$asw is the right response"
+echo -e "What is your full name?\c"
+read first middle last
+echo "Hello $first"
+echo -n "Where do you work?"
+read 
+echo I guess $REPLY keeps you busy!
+read -p "Enter your job title"
+echo "I rhought you might be an $REPLY"
+echo -n "who are your best friends?"
+read -a friends
+echo "Say hi to ${friends[2]}"
+
+
+
+

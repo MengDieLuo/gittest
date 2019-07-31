@@ -1,0 +1,3 @@
+/tom/{count["tom"]++}
+/mary/{count["mary"]++}
+END{print "there are " count["tom"] " Toms in the file and " count["mary"] " Mary in the file."}

@@ -1,0 +1,6 @@
+#!/bin/bash
+#name:lookup
+#lmd
+#20190723
+#homework
+sort -t " " -k 2 $1 | cat -n $1

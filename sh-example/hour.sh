@@ -1,0 +1,21 @@
+#!/bin/sh
+hour=1
+until [ $hour -gt 24 ]
+do
+case "$hour" in
+       [0-9] |1[0-1])
+		echo  "Good morning!"
+                ;;
+       12)  
+		echo  "Lunch time."
+                ;;
+       1[3-7])   
+		echo  "Siesta time."
+                ;;
+       *)  
+		echo  "Good night."
+                ;;
+esac
+hour=`expr $hiour + 1`
+done
+

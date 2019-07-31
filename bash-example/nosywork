@@ -1,0 +1,16 @@
+#!/bin/bash
+echo what's your full name?
+read first middle last
+echo Hello $first
+echo what's your birthyear?
+read birth
+age=expr `date +%Y` - $birth
+printf "Wow ,you are %d years old\n" age
+echo what is you logname?
+echo $LOGNAME
+id
+echo your home directory is $HOME
+ps -u $LOGNAME
+set `date`
+echo The day of week is $4 and the current time is $5
+

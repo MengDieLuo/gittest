@@ -1,0 +1,23 @@
+#!/bin/bash
+#scriptname : printer_check
+# script to clear a hung-up printer
+if [ $LOGNAME != root ]
+then
+	echo "Must have root pricileges to run this program"
+	exit 1
+fi
+cat << EOF
+warning : All jobs in the printer queue will be removed.
+Please turn off the printer now.press return when you 
+are ready to continue.Otherwise press Contol C.
+EOF
+read JUNK
+echo
+/etc/rc.d/init.d/lpd stop
+echo -e "\nPlease turn the printer on now"
+echo "press Enter to continue"
+resd JUNK
+echo 
+/etc/rc.d/init.d/lpd start
+
+

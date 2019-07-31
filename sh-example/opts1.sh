@@ -1,0 +1,14 @@
+#!/bin/sh
+while getopts xy options
+do
+	case $options in
+	x) 
+		echo "YOu entered -x as an option"
+		;;
+	y)
+		echo "You entered -y as an option"
+		;;
+	esac
+done
+
+

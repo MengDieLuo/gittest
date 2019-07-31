@@ -1,0 +1,12 @@
+#!/bin/bash
+dir=/home/lmd/bin/new/backupscript
+for file in memo[1-5]
+do
+	if [ -f $file ]
+	then 
+		cp $file $dir/$file.bak
+		echo "$file is backed up in $dir"
+	fi
+done
+
+

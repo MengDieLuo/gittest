@@ -1,0 +1,32 @@
+BEGIN{
+print "CAMPAIGN 1998 CONTRIBUTIONS***"
+print "___________________________________________________________________________"
+print "NAME                 PHONE             Jan  |  Feb  |  Mar |  Total Donated"
+print "___________________________________________________________________________"
+min=1000
+}
+{
+printf("%-21s%s  %6.2f%8.2f%8.2f  %-7.2f\n",$1,$2,$3,$4,$5,$3+$4+$5)
+}
+{
+total+=$3+$4+$5
+}
+{
+a=$3>$4?$3:$4
+b=a>$5?a:$5
+max=max>b?max:b
+}
+{
+c=$3<$4?$3:$4
+d=c<$5?c:$5
+min=min<d?min:d
+}
+END{
+print "___________________________________________________________________________"
+printf("\n%38s\n",$ss="SUMMARY")
+print "___________________________________________________________________________"
+printf("The campaign received a total of $%.2f for this quarter\n",total)
+printf("The average donation for the 12 contributors was $%.2f.\n",total/3)
+printf("The highest contribution was $%.2f.\n",max)
+printf("The lowest contribution was $%.2f.\n",min)
+}

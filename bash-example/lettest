@@ -1,0 +1,21 @@
+#!/bin/bash
+declare -i num
+echo what is your numeric grade?
+read num
+if (( num <= 100 && num > 90  ))
+then
+	echo you received an A,Excellent!
+elif (( num <= 90 && num > 80 ))
+then
+	 echo you received an B,Excellent!
+elif (( num <= 80 && num > 70 ))
+then 
+	 echo you received an C,Excellent!
+elif (( num <= 70 && num >= 60 ))
+then
+	 echo you received an D,Excellent!
+else
+	 echo you received an F,Excellent!
+fi
+
+

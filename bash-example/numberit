@@ -1,0 +1,17 @@
+#!/bin/bash
+if (( $# < 1 ))
+then
+	echo "Usage:$0 filename " >&2
+	exit 1
+fi
+count=1
+cat $1 | while read line
+do	
+	(( count == 1 )) && echo "processing file $1..." > /dev/tty
+	echo -e "$count\t$line"
+	let count+=1
+done > tmp$$
+mv tmp$$ $1
+
+
+
